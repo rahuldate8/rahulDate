@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#selectContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 11px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#countrySelect {
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    #selectContainer {
+        padding: 5px 0;
+    }
+    #countrySelect {
+        width: 80%;
+        max-width: 200px;
+    }
+}
+
+#countrySelect:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
