@@ -1,4 +1,4 @@
-html, body {
+/* html, body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -40,4 +40,65 @@ html, body {
 #countrySelect:focus {
     outline: 2px solid #007bff;
     outline-offset: 2px;
+} */
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+#selectContainer {
+    z-index: 1000;
+}
+
+.btn, .form-select {
+    min-height: 38px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+}
+
+#preloader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+@media (max-width: 768px) {
+    #selectContainer {
+        position: absolute;
+        width: 100%;
+    }
+}
+
+.airport-icon {
+    color: #3388ff;
+    font-size: 20px;
 }
